@@ -8,7 +8,7 @@
 
 <a name="Description"/>
 
-##### Description
+### Description
 
 Application that offers cheap Steam game keys, PlayStation and XBox gift cards.
 
@@ -16,7 +16,7 @@ Application that offers cheap Steam game keys, PlayStation and XBox gift cards.
 
 <a name="Language&Technologies"/>
 
-###### Language & Technologies
+#### Language & Technologies
 
 - Java
 - Spring Boot
