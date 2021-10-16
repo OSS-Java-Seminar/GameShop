@@ -20,7 +20,7 @@ Application that offers cheap Steam game keys, PlayStation and XBox gift cards.
 <br />
 <a name="Language&Technologies"/>
 
-#### Language & Technologies
+### Language & Technologies
 
 - Java
 - Spring Boot
