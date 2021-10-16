@@ -26,5 +26,5 @@ Application that offers cheap Steam game keys, PlayStation and XBox gift cards.
 - Spring Boot
 - Docker
 - Thymeleaf
-- Database
+- SQL Database ??
 
