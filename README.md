@@ -27,7 +27,9 @@ Application that offers cheap Steam game keys, PlayStation and XBox gift cards.
 - Search bar
 - Shopping cart
 - Wishlist for every user
-- 
+- Random games via cases
+- Loyalty point system?
+- Multiple payment methods
 
 
 ### Language & Technologies
