@@ -11,6 +11,7 @@
 <br />
 
 <a name="Description"/>
+
 ### Description
 
 Application that offers cheap Steam game keys, PlayStation and XBox gift cards.
@@ -21,6 +22,7 @@ Application that offers cheap Steam game keys, PlayStation and XBox gift cards.
 <br />
 
 <a name="Features"/>
+
 ### Features
 
 - Multi-user login and register system
@@ -33,6 +35,7 @@ Application that offers cheap Steam game keys, PlayStation and XBox gift cards.
 - Multiple payment methods
 
 <a name="Language&Technologies"/>
+
 ### Language & Technologies
 
 - Java
