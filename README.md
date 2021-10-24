@@ -5,6 +5,7 @@
 - [Description](#Description)
 - [Features](#Features)
 - [Language & Technologies](#Language&Technologies)
+- [Team](#Team)
 
 <br />
 <br />
@@ -48,3 +49,13 @@ Application that offers cheap Steam game keys, PlayStation and XBox gift cards.
 - Thymeleaf
 - SQL Database ??
 
+<br />
+<br />
+<br />
+
+<a name="Team"/>
+
+###  Team
+
+Frane Radak
+Marin Rančić
