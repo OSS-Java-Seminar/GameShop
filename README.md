@@ -15,7 +15,7 @@
 
 ### Description
 
-Application that offers cheap Steam game keys, PlayStation and XBox gift cards.
+Application that offers cheap PC, PlayStation and XBox game keys and gift cards.
 
 
 <br />
