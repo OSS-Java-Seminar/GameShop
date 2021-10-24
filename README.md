@@ -20,6 +20,16 @@ Application that offers cheap Steam game keys, PlayStation and XBox gift cards.
 <br />
 <a name="Language&Technologies"/>
 
+### Features
+
+- Multi-user login and register system
+- Drop down menu with categories
+- Search bar
+- Shopping cart
+- Wishlist for every user
+- 
+
+
 ### Language & Technologies
 
 - Java
