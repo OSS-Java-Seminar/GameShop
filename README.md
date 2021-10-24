@@ -30,7 +30,6 @@ Application that offers cheap PC, PlayStation and XBox game keys and gift cards.
 - Drop down menu with categories
 - Search bar
 - Shopping cart
-- Wishlist for every user
 - Random games via cases
 - Loyalty point system?
 - Multiple payment methods
