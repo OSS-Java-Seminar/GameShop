@@ -3,13 +3,14 @@
 ## Table of contents
 
 - [Description](#Description)
+- [Features](#Features)
 - [Language & Technologies](#Language&Technologies)
 
 <br />
 <br />
 <br />
-<a name="Description"/>
 
+<a name="Description"/>
 ### Description
 
 Application that offers cheap Steam game keys, PlayStation and XBox gift cards.
@@ -18,8 +19,8 @@ Application that offers cheap Steam game keys, PlayStation and XBox gift cards.
 <br />
 <br />
 <br />
-<a name="Language&Technologies"/>
 
+<a name="Features"/>
 ### Features
 
 - Multi-user login and register system
@@ -31,7 +32,7 @@ Application that offers cheap Steam game keys, PlayStation and XBox gift cards.
 - Loyalty point system?
 - Multiple payment methods
 
-
+<a name="Language&Technologies"/>
 ### Language & Technologies
 
 - Java
