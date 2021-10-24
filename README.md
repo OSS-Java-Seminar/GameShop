@@ -57,5 +57,5 @@ Application that offers cheap Steam game keys, PlayStation and XBox gift cards.
 
 ###  Team
 
-Frane Radak
-Marin Rančić
+- Frane Radak 
+- Marin Rančić
