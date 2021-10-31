@@ -27,13 +27,33 @@ Application that offers cheap PC, PlayStation and XBox game keys and gift cards.
 ### Features
 
 - Login and register system
-  - test
-- Drop down menu with categories
+  - as guest
+    - page review
+    - adding products to shoping cart
+    - able to purchase products but has to submit email for confirmation/receipt
+  - as user
+    - same as guest but can earn loyalty points and buy mistery boxes
+    - register with email
+    - log in with username and password
+  - as admin
+    - add/remove content
+    - user management
 - Search bar
-- Shopping cart
-- Random games via cases
-- Loyalty point system
+  - simplified way to find desired product
+- Shoping cart
+- Random games via mistery boxes (users only)
+  - users can pay certain amount to get random products
+- Loyalty point system (users only)
+  - Earning points
+    - purchasing products
+  - Spending points
+    - discounts
+    - special mistery boxes
+    - game keys
 - Multiple payment methods
+  - Credit cards
+  - PayPal
+  - Paysafe
 
 <br />
 <br />
