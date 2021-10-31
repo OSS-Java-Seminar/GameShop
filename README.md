@@ -8,8 +8,6 @@
 - [Team](#Team)
 
 <br />
-<br />
-<br />
 
 <a name="Description"/>
 
@@ -56,8 +54,6 @@ Application that offers cheap PC, PlayStation and XBox game keys and gift cards.
   - Paysafe
 
 <br />
-<br />
-<br />
 
 <a name="Language&Technologies"/>
 
@@ -69,8 +65,6 @@ Application that offers cheap PC, PlayStation and XBox game keys and gift cards.
 - Thymeleaf
 - SQL Database ??
 
-<br />
-<br />
 <br />
 
 <a name="Team"/>
