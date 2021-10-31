@@ -26,12 +26,13 @@ Application that offers cheap PC, PlayStation and XBox game keys and gift cards.
 
 ### Features
 
-- Multi-user login and register system
+- Login and register system
+-- test
 - Drop down menu with categories
 - Search bar
 - Shopping cart
 - Random games via cases
-- Loyalty point system?
+- Loyalty point system
 - Multiple payment methods
 
 <br />
