@@ -27,7 +27,7 @@ Application that offers cheap PC, PlayStation and XBox game keys and gift cards.
 ### Features
 
 - Login and register system
--- test
+  - test
 - Drop down menu with categories
 - Search bar
 - Shopping cart
