@@ -17,9 +17,6 @@
 
 Application that offers cheap PC, PlayStation and XBox game keys and gift cards.
 
-
-<br />
-<br />
 <br />
 
 <a name="Features"/>
@@ -29,10 +26,13 @@ Application that offers cheap PC, PlayStation and XBox game keys and gift cards.
 - Login and register system
   - as guest
     - product overview
-    - adding products to shoping cart
-    - able to purchase products but has to submit email for confirmation/receipt
+    - adding products to shoping cart but cannot purchase without registration
   - as user
-    - same as guest but can earn loyalty points and buy mistery boxes
+    - product overview
+    - adding products to shoping cart
+    - purchase products
+    - earn loyalty points
+    - buy mistery boxes
     - register with email
     - log in with username and password
   - as admin
