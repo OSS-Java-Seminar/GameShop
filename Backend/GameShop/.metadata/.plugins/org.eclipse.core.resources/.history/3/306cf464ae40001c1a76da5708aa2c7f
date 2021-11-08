@@ -1,0 +1,13 @@
+package com.Radak_Rancic.entitites;
+
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Set;
+
+public class Game {
+	int GameID;
+	String Name;
+	int GenreID;
+	double Price;
+	String Description;
+}

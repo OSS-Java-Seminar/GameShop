@@ -1,0 +1,11 @@
+package com.Radak_Rancic.entitites;
+
+@Entity
+
+public class Game {
+	int GameID;
+	String Name;
+	int GenreID;
+	double Price;
+	String Description;
+}
