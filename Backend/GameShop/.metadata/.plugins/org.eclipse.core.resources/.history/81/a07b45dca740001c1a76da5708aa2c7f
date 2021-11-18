@@ -1,9 +1,0 @@
-package com.Radak_Rancic.entitites;
-
-public class Game {
-	int GameID;
-	String Name;
-	int GenreID;
-	double Price;
-	String Description;
-}
