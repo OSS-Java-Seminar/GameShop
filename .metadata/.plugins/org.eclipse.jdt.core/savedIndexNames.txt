@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+C:\Users\PC\Desktop\GameShop\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
-1642175237.index
-489909687.index
