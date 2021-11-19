@@ -1,4 +1,4 @@
-package database.entities;
+/*package database.entities;
 
 import javax.annotation.processing.Generated;
 import javax.persistence.*;
@@ -15,4 +15,4 @@ public class Game {
 	int GenreID;
 	double Price;
 	String Description;
-}
+}*/
