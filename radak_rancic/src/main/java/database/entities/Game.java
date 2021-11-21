@@ -9,6 +9,7 @@ import java.util.*;
 @Data
 @Table(name="Game")
 public class Game {
+	//Proba
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="gameId")
