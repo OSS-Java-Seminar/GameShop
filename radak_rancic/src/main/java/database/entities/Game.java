@@ -1,18 +1,35 @@
-/*package database.entities;
+package database.entities;
 
-import javax.annotation.processing.Generated;
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.Set;
+import lombok.*;
+import java.util.*;
+
 
 @Entity
-@Table(name="Games")
+@Data
+@Table(name="Game")
 public class Game {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	int GameID;
-	String Name;
-	int GenreID;
-	double Price;
-	String Description;
-}*/
+	@Column(name="gameId")
+	private int id;
+	@Column(name="name")
+	private String name;
+	@ManyToMany(targetEntity=Genre.class,cascade= {CascadeType.ALL})
+	@JoinTable(name="game_genre",
+			joinColumns = { @JoinColumn(name = "gameId") },   
+            inverseJoinColumns = { @JoinColumn(name = "genreId")}  
+	)
+	@Column(name="genre")
+	private Set<Genre> genres;
+	@Column(name="price")
+	private double price;
+	@Column(name="description")
+	private String description;
+	public Game(String name,Set<Genre>genres,double price,String description) {
+		this.name=name;
+		this.genres=genres;
+		this.price=price;
+		this.description=description;
+	}
+}

@@ -1,6 +1,14 @@
 package database.entities;
 
+import javax.persistence.*;
+
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name="Role")
 public class Role {
-	int RoleID;
-	String role_name;
+	@Column(name="roleId")
+	private int roleId;
+	private String roleName;
 }
