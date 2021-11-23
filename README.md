@@ -61,6 +61,7 @@ Application that offers cheap PC, PlayStation and XBox game keys and gift cards.
 
 - Java
 - Spring Boot
+- Flyway
 - Docker
 - Thymeleaf
 - SQL Database ??
