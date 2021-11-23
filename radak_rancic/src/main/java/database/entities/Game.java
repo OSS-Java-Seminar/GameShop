@@ -4,7 +4,6 @@ import javax.persistence.*;
 import lombok.*;
 import java.util.*;
 
-
 @Entity
 @Data
 @Table(name="Game")
