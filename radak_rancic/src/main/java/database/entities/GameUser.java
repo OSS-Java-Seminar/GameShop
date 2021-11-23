@@ -4,12 +4,11 @@ import java.util.*;
 
 import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
 @Entity
 @Data
-@Table(name="GameUser")
+@Table(name="Game_User")
 public class GameUser {
 	@ManyToOne
 	@JoinColumn(name="gameId")
@@ -19,11 +18,11 @@ public class GameUser {
 	private int userId;
 	@OneToMany
 	@JoinColumn(name="paymentId")
-	private int paymentID;
+	private int paymentId;
 	@OneToMany
 	@JoinColumn(name="steamKey")
 	private Set<String> keys;
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private String invoice_number;
+	private String invoiceNumber;
 
 }

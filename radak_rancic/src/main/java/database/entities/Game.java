@@ -9,12 +9,11 @@ import java.util.*;
 @Data
 @Table(name="Game")
 public class Game {
-	//Proba 2
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="gameId")
 	private int id;
-	@Column(name="name")
+	@Column(name="gameName")
 	private String name;
 	@ManyToMany(targetEntity=Genre.class,cascade= {CascadeType.ALL})
 	@JoinTable(name="game_genre",
@@ -27,6 +26,7 @@ public class Game {
 	private double price;
 	@Column(name="description")
 	private String description;
+	
 	public Game(String name,Set<Genre>genres,double price,String description) {
 		this.name=name;
 		this.genres=genres;

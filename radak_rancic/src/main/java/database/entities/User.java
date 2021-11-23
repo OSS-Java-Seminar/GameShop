@@ -5,14 +5,15 @@ import java.util.Set;
 import javax.persistence.*;
 
 import lombok.*;
+
 @Data
 @Entity
 @Table(name="User")
 public class User {
-	@Column(name="userId")
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
+	@Column(name="userId")
+	private int userId;
 	@Column(name="username")
 	private String username;
 	@Column(name="password")
@@ -27,4 +28,15 @@ public class User {
 	@OneToMany
 	@JoinColumn(name="roleId")
 	private int roleId;
+	
+	public User(String username, String password, String email, Set<Game> games, int loyaltyPoints, int roleId) {
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.games = games;
+		this.loyaltyPoints = loyaltyPoints;
+		this.roleId = roleId;
+	}
+	
+	
 }
