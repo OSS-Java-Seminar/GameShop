@@ -64,7 +64,7 @@ Application that offers cheap PC, PlayStation and XBox game keys and gift cards.
 - Flyway
 - Docker
 - Thymeleaf
-- SQL Database ??
+- MySQL Database
 
 <br />
 
