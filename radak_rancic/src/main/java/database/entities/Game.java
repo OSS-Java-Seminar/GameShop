@@ -16,7 +16,7 @@ public class Game {
 	private String name;
 	@ManyToMany(targetEntity=Genre.class,cascade= {CascadeType.ALL})
 	@JoinTable(name="game_genre",
-			joinColumns = { @JoinColumn(name = "gameId") },   
+			joinColumns = { @JoinColumn(name = "gameId") },
             inverseJoinColumns = { @JoinColumn(name = "genreId")}  
 	)
 	@Column(name="genre")
@@ -32,4 +32,5 @@ public class Game {
 		this.price=price;
 		this.description=description;
 	}
+
 }
