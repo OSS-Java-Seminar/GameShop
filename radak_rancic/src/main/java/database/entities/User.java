@@ -25,7 +25,7 @@ public class User {
 	@Column(name="loyaltyPoints")
 	private int loyaltyPoints;
 	@Column(name="role")
-	@OneToMany
+	@OneToMany(fetch=FetchType.LAZY,cascade=CascadeType.ALL,mappedBy="User")
 	@JoinColumn(name="roleId")
 	private int roleId;
 	

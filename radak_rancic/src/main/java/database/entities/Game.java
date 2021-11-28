@@ -10,18 +10,21 @@ import java.util.*;
 public class Game {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="gameId")
+	@Column(name="gameId",nullable=false)
 	private int id;
 	@Column(name="gameName")
 	private String name;
+	/* stara verzija
 	@ManyToMany(targetEntity=Genre.class,cascade= {CascadeType.ALL})
 	@JoinTable(name="game_genre",
 			joinColumns = { @JoinColumn(name = "gameId") },
             inverseJoinColumns = { @JoinColumn(name = "genreId")}  
 	)
-	@Column(name="genre")
+	*/
+	@ManyToMany(mappedBy="GameGenre",fetch=FetchType.EAGER)
+	@Column(name="genre",nullable=false)
 	private Set<Genre> genres;
-	@Column(name="price")
+	@Column(name="price",nullable=false)
 	private double price;
 	@Column(name="description")
 	private String description;

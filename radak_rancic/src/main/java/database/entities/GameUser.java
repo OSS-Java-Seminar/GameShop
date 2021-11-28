@@ -10,19 +10,16 @@ import lombok.Data;
 @Data
 @Table(name="Game_User")
 public class GameUser {
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="gameId")
 	private int gameId;
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="userId")
 	private int userId;
-	@OneToMany
-	@JoinColumn(name="paymentId")
+	@OneToMany(fetch=FetchType.LAZY,mappedBy="Game_User")
 	private int paymentId;
-	@OneToMany
-	@JoinColumn(name="steamKey")
+	@OneToMany(fetch=FetchType.LAZY,mappedBy="Game_User")
 	private Set<String> keys;
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private String invoiceNumber;
-
 }
