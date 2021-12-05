@@ -12,10 +12,10 @@ import lombok.Data;
 public class GameUser {
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="gameId")
-	private int gameId;
+	private Long gameId;
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="userId")
-	private int userId;
+	private Long userId;
 	@OneToMany(fetch=FetchType.LAZY,mappedBy="Game_User")
 	private int paymentId;
 	@OneToMany(fetch=FetchType.LAZY,mappedBy="Game_User")

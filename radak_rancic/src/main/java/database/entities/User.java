@@ -8,12 +8,12 @@ import lombok.*;
 
 @Data
 @Entity
-@Table(name="User")
+@Table(name="user")
 public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="userId")
-	private int userId;
+	private Long userId;
 	@Column(name="username")
 	private String username;
 	@Column(name="password")

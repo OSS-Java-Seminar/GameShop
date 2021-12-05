@@ -10,7 +10,7 @@ import lombok.Data;
 public class Key {
 	@Id
 	@Column(name="keyId")
-	private int id;
+	private Long id;
 	@Id
 	@Column(name="steamKey")
 	private String steamKey;
