@@ -1,8 +1,11 @@
 package database.repositories;
 
 import database.entities.Role;
-import org.springframework.data.repository.CrudRepository;
 
-public interface RoleRepository extends CrudRepository<Role, String>{
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface RoleRepository extends JpaRepository<Role, Long>{
 
 }

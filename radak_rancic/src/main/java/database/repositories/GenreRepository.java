@@ -1,8 +1,11 @@
 package database.repositories;
 
 import database.entities.Genre;
-import org.springframework.data.repository.CrudRepository;
 
-public interface GenreRepository extends CrudRepository<Genre, String> {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface GenreRepository extends JpaRepository<Genre, Long> {
 
 }

@@ -11,7 +11,7 @@ public class Game {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="gameId",nullable=false)
-	private int id;
+	private Long id;
 	@Column(name="gameName")
 	private String name;
 	/* stara verzija
@@ -21,17 +21,17 @@ public class Game {
             inverseJoinColumns = { @JoinColumn(name = "genreId")}  
 	)
 	*/
-	@ManyToMany(mappedBy="GameGenre",fetch=FetchType.EAGER)
-	@Column(name="genre",nullable=false)
-	private Set<Genre> genres;
+//	@ManyToMany(mappedBy="GameGenre",fetch=FetchType.EAGER)
+//	@Column(name="genre",nullable=false)
+//	private Set<Genre> genres;
 	@Column(name="price",nullable=false)
 	private double price;
 	@Column(name="description")
 	private String description;
 	
-	public Game(String name,Set<Genre>genres,double price,String description) {
+	public Game(String name,double price,String description) {
 		this.name=name;
-		this.genres=genres;
+		//this.genres=genres;
 		this.price=price;
 		this.description=description;
 	}
