@@ -20,15 +20,29 @@ public class User {
 	private String password;
 	@Column(name="email")
 	private String email;
-//	@Column(name="games")
-//	private Set<Game>games;
+	@ManyToMany(
+			fetch = FetchType.EAGER
+			)
+	@JoinTable(
+			name="Game_User",
+			joinColumns=@JoinColumn(
+					name="user_Id",
+					referencedColumnName = "userId"
+					),
+			inverseJoinColumns = @JoinColumn(
+					name="game_Id",
+					referencedColumnName = "gameId"
+					)
+			)
+	private Set<Game>games;
 	@Column(name="loyaltyPoints")
 	private int loyaltyPoints;
-//	@Column(name="role")
-//	@OneToMany(fetch=FetchType.LAZY,cascade=CascadeType.ALL,mappedBy="User")
-//	@JoinColumn(name="roleId")
-//	private int roleId;
-//	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(
+			name="role_Id",
+			referencedColumnName="roleId"					
+			)
+	Role role;
 	public User(String username, String password, String email, int loyaltyPoints) {
 		this.username = username;
 		this.password = password;
