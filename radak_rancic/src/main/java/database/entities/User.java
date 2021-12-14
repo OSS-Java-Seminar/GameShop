@@ -43,6 +43,21 @@ public class User {
 			referencedColumnName="roleId"					
 			)
 	Role role;
+	@ManyToMany(
+			fetch=FetchType.EAGER
+			)
+	@JoinTable(
+			name="User_invoice",
+			joinColumns=@JoinColumn(
+					name="user_id",
+					referencedColumnName = "userId"
+					),
+			inverseJoinColumns = @JoinColumn(
+					name="invoice_id",
+					referencedColumnName = "invoiceId"
+					)
+			)
+	Set<Invoice> invoices;
 	public User(String username, String password, String email, int loyaltyPoints) {
 		this.username = username;
 		this.password = password;

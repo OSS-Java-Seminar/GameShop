@@ -13,7 +13,7 @@ import java.util.*;
 public class Game {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="gameId",nullable=false)
+	@Column(name="gameId")
 	private Long id;
 	@Column(name="gameName")
 	private String name;

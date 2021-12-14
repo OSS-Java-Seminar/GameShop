@@ -2,10 +2,14 @@ package database.entities;
 
 import javax.persistence.*;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name="Role")
 public class Role {
 	@Id
@@ -18,6 +22,4 @@ public class Role {
 	public Role(String roleName) {
 		this.roleName = roleName;
 	}
-	
-	
 }
