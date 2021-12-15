@@ -1,16 +1,18 @@
-package database.entities;
-
-//import javax.persistence.*;
+//package database.entities;
 //
-//import lombok.Data;
+//import javax.persistence.*;
+//import java.util.*;
+//import lombok.*;
 //
 //@Entity
 //@Data
+//@AllArgsConstructor
+//@NoArgsConstructor
 //@Table(name="Key")
 //public class Key {
 //	@Id
 //	@Column(name="keyId")
-//	private Long id;
+//	private UUID id;
 //	@Id
 //	@Column(name="steamKey")
 //	private String steamKey;

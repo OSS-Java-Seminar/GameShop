@@ -14,7 +14,7 @@ public class Game {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="gameId",nullable=false)
-	private Long id;
+	private UUID id;
 	@Column(name="gameName")
 	private String name;
 	@ManyToMany(

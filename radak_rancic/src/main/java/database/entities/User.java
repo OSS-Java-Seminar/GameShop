@@ -1,19 +1,19 @@
 package database.entities;
 
-import java.util.Set;
-
+import java.util.*;
 import javax.persistence.*;
-
 import lombok.*;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name="user")
 public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="userId")
-	private Long userId;
+	private UUID id;
 	@Column(name="username")
 	private String username;
 	@Column(name="password")

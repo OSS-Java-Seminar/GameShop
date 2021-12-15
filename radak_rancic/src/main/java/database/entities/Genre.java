@@ -1,17 +1,19 @@
 package database.entities;
 
 import javax.persistence.*;
-
-import lombok.Data;
+import java.util.*;
+import lombok.*;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name="Genre")
 public class Genre {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="genreId")
-	private Long id;
+	private UUID id;
 	@Column(name="genreName")
 	private String genreName;
 	
