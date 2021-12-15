@@ -13,8 +13,8 @@ import java.util.*;
 public class Game {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="gameId")
-	private Long id;
+	@Column(name="gameId",nullable=false)
+	private UUID id;
 	@Column(name="gameName")
 	private String name;
 	@ManyToMany(

@@ -1,19 +1,19 @@
 package database.entities;
 
-import java.util.Set;
-
+import java.util.*;
 import javax.persistence.*;
-
 import lombok.*;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name="user")
 public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="userId")
-	private Long userId;
+	private UUID id;
 	@Column(name="username")
 	private String username;
 	@Column(name="password")
@@ -43,21 +43,6 @@ public class User {
 			referencedColumnName="roleId"					
 			)
 	Role role;
-	@ManyToMany(
-			fetch=FetchType.EAGER
-			)
-	@JoinTable(
-			name="User_invoice",
-			joinColumns=@JoinColumn(
-					name="user_id",
-					referencedColumnName = "userId"
-					),
-			inverseJoinColumns = @JoinColumn(
-					name="invoice_id",
-					referencedColumnName = "invoiceId"
-					)
-			)
-	Set<Invoice> invoices;
 	public User(String username, String password, String email, int loyaltyPoints) {
 		this.username = username;
 		this.password = password;

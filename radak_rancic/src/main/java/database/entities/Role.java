@@ -1,10 +1,8 @@
 package database.entities;
 
 import javax.persistence.*;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import java.util.*;
+import lombok.*;
 
 @Entity
 @Data
@@ -15,11 +13,13 @@ public class Role {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="roleId")
-	private Long id;
+	private UUID id;
 	@Column(name="roleName")
 	private String roleName;
 	
 	public Role(String roleName) {
 		this.roleName = roleName;
 	}
+	
+	
 }
