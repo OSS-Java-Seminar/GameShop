@@ -2,23 +2,25 @@ package database.entities;
 
 import java.util.*;
 import javax.persistence.*;
+
+import org.hibernate.annotations.Type;
+
 import lombok.*;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="Invoice")
+@Table(name="invoice")
 public class Invoice {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Type(type = "uuid-char")
 	@Column(name="invoiceId")
 	private UUID id;
-	@OneToMany(fetch=FetchType.LAZY,mappedBy="keyId")
-	private List<KeyStorage> keystorage;
+	
+	@ManyToMany(fetch = FetchType.EAGER)
+	private List<KeyStorage> keys;
+	
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(
-			name="payment_Id",
-			referencedColumnName="paymentId"					
-			)
 	private Payment payment;
 }

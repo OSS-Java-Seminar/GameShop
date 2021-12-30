@@ -1,6 +1,9 @@
 package database.entities;
 
 import javax.persistence.*;
+
+import org.hibernate.annotations.Type;
+
 import java.util.*;
 import lombok.*;
 
@@ -8,12 +11,14 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="Genre")
+@Table(name="genre")
 public class Genre {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Type(type = "uuid-char")
 	@Column(name="genreId")
 	private UUID id;
+	
 	@Column(name="genreName")
 	private String genreName;
 	
