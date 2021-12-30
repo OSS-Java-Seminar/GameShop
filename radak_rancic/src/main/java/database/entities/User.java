@@ -37,6 +37,7 @@ public class User {
 	@ManyToOne(fetch = FetchType.EAGER)
 	Role role;
 	
+	@ManyToMany(fetch=FetchType.EAGER)
 	Set<Invoice> invoices;
 	
 	public User(String username, String password, String email, int loyaltyPoints) {
