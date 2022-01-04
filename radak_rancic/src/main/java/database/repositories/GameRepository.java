@@ -10,5 +10,6 @@ import java.util.*;
 
 @Repository
 public interface GameRepository extends JpaRepository<Game, UUID>{
-
+	Game findByName(String name);
+	boolean existsByName(String name);
 }

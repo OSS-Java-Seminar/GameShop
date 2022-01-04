@@ -23,12 +23,18 @@ public class Game {
 	@Column(name="gameName")
 	private String name;
 	
-	@ManyToMany(fetch = FetchType.EAGER)
+	@ManyToMany()
 	private Set<Genre> genres;
 	
 	@Column(name="price")
 	private double price;
 	
+	@ManyToOne
+	private Platform platform;
+	
+	@OneToOne
+	private Picture picture;
+	
 	@Column(name="description")
-	private String description;
+	private String description;	
 }

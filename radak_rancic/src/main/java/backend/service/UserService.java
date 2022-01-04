@@ -1,5 +1,9 @@
 package backend.service;
 
-public interface UserService {
+import database.entities.*;
 
+public interface UserService {
+	User findByUserName(String username);
+	String addUser(User u);
+	String deleteUser(String username);
 }

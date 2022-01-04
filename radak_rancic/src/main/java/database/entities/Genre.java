@@ -22,8 +22,5 @@ public class Genre {
 	@Column(name="genreName")
 	private String genreName;
 	
-	public Genre(String genreName) {
-		this.genreName = genreName;
-	}
 	
 }

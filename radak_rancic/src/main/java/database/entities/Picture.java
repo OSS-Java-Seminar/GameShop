@@ -19,8 +19,5 @@ public class Picture {
 	@Type(type = "uuid-char")
 	private UUID pictureId;
 	
-	@ManyToOne
-	private Game game;
-	
 	private String png;
 }
