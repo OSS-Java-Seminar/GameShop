@@ -8,7 +8,6 @@ import java.util.*;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, UUID> {
-	
-	
-
+	User findByUsername(String name);
+	boolean existsByUsername(String username);
 }

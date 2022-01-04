@@ -21,8 +21,4 @@ public class Payment {
 	
 	@Column(name="paymentType")
 	private String type;
-	
-	public Payment(String type) {
-		this.type=type;	
-	}
 }

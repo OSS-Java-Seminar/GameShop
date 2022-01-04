@@ -21,10 +21,4 @@ public class Role {
 	
 	@Column(name="roleName")
 	private String roleName;
-	
-	public Role(String roleName) {
-		this.roleName = roleName;
-	}
-	
-	
 }

@@ -8,5 +8,6 @@ import java.util.*;
 
 @Repository
 public interface RoleRepository extends JpaRepository<Role, UUID>{
+	Role findByRoleName(String roleName);
 
 }

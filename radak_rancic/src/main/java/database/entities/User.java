@@ -39,13 +39,4 @@ public class User {
 	
 	@ManyToMany(fetch=FetchType.EAGER)
 	Set<Invoice> invoices;
-	
-	public User(String username, String password, String email, int loyaltyPoints) {
-		this.username = username;
-		this.password = password;
-		this.email = email;
-		this.loyaltyPoints = loyaltyPoints;
-	}
-	
-	
 }

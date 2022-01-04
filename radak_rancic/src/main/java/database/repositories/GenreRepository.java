@@ -8,5 +8,5 @@ import java.util.*;
 
 @Repository
 public interface GenreRepository extends JpaRepository<Genre, UUID> {
-
+	Genre findByGenreName(String name);
 }
