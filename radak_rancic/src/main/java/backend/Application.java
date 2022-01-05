@@ -43,20 +43,20 @@ public class Application implements CommandLineRunner {
     }
     @Override
 	public void run(String... args) {
-   	roleRepository.save(new Role(null,"admin"));
-   	roleRepository.save(new Role(null,"user"));
-    	
-   	paymentRepository.save(new Payment(null,"mastercard"));
-  	paymentRepository.save(new Payment(null,"visa"));
-   	paymentRepository.save(new Payment(null,"pay_pal"));
-    	
-   	genreRepository.save(new Genre(null,"horor"));
-   	genreRepository.save(new Genre(null,"sport"));
-   	genreRepository.save(new Genre(null,"war"));
-  	
-   	userRepository.save(new User(null,"user","user","user@gmail.com",null,0,roleRepository.findByRoleName("user"),null));
-//    	Set<Genre> tmp = new HashSet<>();
-//    	tmp.add(genreRepository.findByGenreName("sport"));
-//   	gameRepository.save(new Game(null,"NHL 2021",tmp,500,""));
+//   	roleRepository.save(new Role(null,"admin"));
+//   	roleRepository.save(new Role(null,"user"));
+//    	
+//   	paymentRepository.save(new Payment(null,"mastercard"));
+//  	paymentRepository.save(new Payment(null,"visa"));
+//   	paymentRepository.save(new Payment(null,"pay_pal"));
+//    	
+//   	genreRepository.save(new Genre(null,"horor"));
+//   	genreRepository.save(new Genre(null,"sport"));
+//   	genreRepository.save(new Genre(null,"war"));
+//  	
+//   	userRepository.save(new User(null,"user","user","user@gmail.com",null,0,roleRepository.findByRoleName("user"),null));
+////    	Set<Genre> tmp = new HashSet<>();
+////    	tmp.add(genreRepository.findByGenreName("sport"));
+////   	gameRepository.save(new Game(null,"NHL 2021",tmp,500,""));
 	}
 }

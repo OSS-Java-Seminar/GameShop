@@ -1,7 +1,11 @@
 package backend.service.implementation;
 
+import java.util.List;
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 import backend.service.UserService;
 import database.entities.User;
@@ -35,5 +39,23 @@ public class UserServiceImpl implements UserService {
 			return "User not exists";
 		}
 	}
+
+	@Override
+	public List<User> getAllUsers() {
+		return userRepository.findAll();
+	}
+
+	@Override
+	public boolean ifUserExists(String username) {
+		return userRepository.existsByUsername(username);
+	}
+
+	@Override
+	public User findUserById(UUID id) {
+		return userRepository.findById(id).get();
+	}
+
+	
+	
 	
 }

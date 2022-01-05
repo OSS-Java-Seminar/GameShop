@@ -1,5 +1,8 @@
 package backend.service.implementation;
 
+import java.util.List;
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,23 +19,22 @@ public class GameServiceImpl implements GameService {
 	public Game findbyGameName(String name) {
 		return gameRepository.findByName(name);
 	}
-	public String addGame(Game g) {
-		if(gameRepository.existsByName(g.getName())) {
-			return "Game alreday exists";
-		}
-		else {
-			gameRepository.save(g);
-			return "Game added";
-		}
+	public void addGame(Game g) {
+		gameRepository.save(g);
 	}
-	public String deleteGame(Game g) {
-		if(gameRepository.existsByName(g.getName())) {
-			gameRepository.delete(g);
-			return "Game alreday exists";
-		}
-		else {
-			gameRepository.save(g);
-			return "Game added";
-		}
+	public void deleteGame(String name) {
+		gameRepository.deleteByname(name);
+		
+	}
+	
+	public List<Game> findAllGames() {
+		return gameRepository.findAll();
+	}
+	public boolean ifGameExists(String name) {
+		return gameRepository.existsByName(name);
+	}
+	
+	public Game findGameById(UUID id) {
+		return gameRepository.findById(id).get();
 	}
 }
