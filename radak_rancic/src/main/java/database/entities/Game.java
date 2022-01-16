@@ -37,4 +37,7 @@ public class Game {
 	
 	@Column(name="description")
 	private String description;	
+	
+	@Column(name="loyaltyPoints")
+	private int loyaltyPoints;
 }

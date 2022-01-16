@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<head th:replace="common/header :: common-header" />
+
+<body>
+	<div th:replace="common/header :: navbar" />
+
+
+	<div class="container" style="margin: 0px 0px 50px 130px; width: 60%;">
+		<div class="row">
+			<form class="form-horizontal" th:action="@{/admin/games/add}"
+				method="post" enctype="multipart/form-data">
+				<fieldset>
+					<legend class="center-block"
+						style="padding: 20px 0; margin: 0 0 40px 0;">New game
+						information</legend>
+
+					<div class="form-group">
+						<label class="col-xs-2 control-label" for="name">Name</label>
+						<div class="col-xs-8">
+							<input type="text" class="form-control" id="name" name="name"
+								th:value="${game.name}" required="required" placeholder="Name" />
+							<span class="help-block">Game name</span>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-xs-2 control-label" for="genre">Genre</label>
+						<div class="col-xs-8">
+							<input type="text" class="form-control" id="genre" name="genre"
+								th:value="${game.genre}" required="required" placeholder="Genre" />
+							<span class="help-block">Game genre</span>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-xs-2 control-label" for="description">Description</label>
+						<div class="col-xs-8">
+							<input type="text" class="form-control" id="description"
+								name="description" th:value="${game.description}"
+								placeholder="Description" /> <span class="help-block">Game
+								description</span>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-xs-2 control-label" for="platform">Platform</label>
+						<div class="col-xs-8">
+							<select th:value="${game.platform}" id="platform"
+								class="form-control" name="platform">
+								<option value="" selected="selected" disabled="disabled">Please
+									select an option...</option>
+								<option value="Pc" th:selected="(${game.platform}=='Pc')">PC</option>
+								<option value="Ps4" th:selected="(${game.platform}=='Ps4')">PS4</option>
+								<option value="Xbox" th:selected="(${game.platform}=='Xbox')">XBOX</option>
+							</select>
+						</div>
+					</div>
+					<br>
+
+					<div class="form-group">
+						<label class="col-xs-2 control-label" for="price"> Price</label>
+						<div class="col-xs-8">
+							<div class="input-group">
+								<span class="input-group-addon">&euro;</span> <input
+									th:value="${game.price}" type="number" name="price" step="0.01"
+									class="form-control" id="price" placeholder="Price" />
+							</div>
+							<span class="help-block">Game price</span>
+						</div>
+					</div>
+
+					<!-- 	<div class="form-group">
+						<label class="col-xs-2 control-label" for="price"> Price</label>
+						<div class="col-xs-8">
+							<div class="input-group">
+								<span class="input-group-addon">&euro;</span> <input
+									th:value="${game.loyaltyPoints}" type="number" name="loyaltyPoints"
+									step="1" class="form-control" id="loyaltyPoints" placeholder="loyaltyPoints" />
+							</div>
+							<span class="help-block">Loyalty points</span>
+						</div>
+					</div> -->
+
+					<!-- <div class="form-group">
+						<div class="col-xs-2 control-label">
+							<label for="gameImage">Upload game image</label>
+						</div>
+						<div class="col-xs-8" style="padding-top: 20px;">
+							<input id="gameImage" type="file" name="gameImage"
+								th:value="${game.image}" />
+						</div>
+					</div> -->
+
+
+					<br>
+					<div class="form-group">
+						<div class="col-xs-2"></div>
+						<div class="col-xs-8">
+							<button type="submit" class="btn btn-success">Add game</button>
+							&nbsp;&nbsp;&nbsp; <a class="btn btn-danger" th:href="@{/}">Cancel</a>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
+
+
+	<div th:replace="common/header :: body-bottom-scripts" />
+</body>
+</html>

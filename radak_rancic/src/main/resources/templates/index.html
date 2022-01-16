@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<head th:replace="common/header :: common-header" />
+
+<body>
+
+	<div th:replace="common/header :: navbar"></div>
+
+	<div class="header_"></div>
+	<div class="row first_row">
+		<div class="col-xs-6">
+			<div>
+				<div class="panel-body">
+					<img src="/images/cheap.jpg" class="img-responsive"
+						style="border-radius: 20px;">
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-6">
+			<div>
+				<div class="panel-body">
+					<h3 class="text-center"
+						style="padding: 40px 0 20px; color: rgb(51, 122, 183);">Cheapest
+						games on the market!</h3>
+					<p style="padding: 0 100px; line-height: 26px;">
+						We have the most cheapest and best quality games for everyone.
+						Hardcore gamer? Just a casual who wants to have fun? Like
+						exploring new worlds and collecting shiny things? Or maybe you
+						need something to get spooked by? Whatever you like, whatever
+						you need, we got you covered! Click <strong><a
+							th:href="@{/gameView}">here</a></strong> and take a look at all games we
+						offer.
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div class="row first_row">
+		<div class="col-xs-6">
+			<div>
+
+
+				<div class="panel-body">
+					<h3 class="text-center"
+						style="padding: 40px 0 20px; color: rgb(51, 122, 183);">Games
+						for every console!</h3>
+					<p style="padding: 0 100px; line-height: 26px;">Do you prefer
+						playing on PC like a real master race or rather on consoles? We
+						have games for vast majority of consoles so you can pick whatever
+						you prefer the most!</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-6">
+			<div>
+				<div class="panel-body">
+					<img src="/images/console.png" class="img-responsive"
+						style="border-radius: 20px;">
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div th:replace="common/header :: footer"></div>
+	<div th:replace="common/header :: body-bottom-scripts" ></div>
+
+</body>
+</html>
