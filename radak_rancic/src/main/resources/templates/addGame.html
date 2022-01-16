@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
-<head th:replace="common/header :: common-header" />
+<head th:replace="common/adminHeader :: common-header" />
 
 <body>
-	<div th:replace="common/header :: navbar" />
+	<div th:replace="common/adminHeader :: common-navbar" />
 
 
 	<div class="container" style="margin: 0px 0px 50px 130px; width: 60%;">
@@ -24,14 +24,14 @@
 						</div>
 					</div>
 
-					<div class="form-group">
+					<!-- <div class="form-group">
 						<label class="col-xs-2 control-label" for="genre">Genre</label>
 						<div class="col-xs-8">
 							<input type="text" class="form-control" id="genre" name="genre"
 								th:value="${game.genre}" required="required" placeholder="Genre" />
 							<span class="help-block">Game genre</span>
 						</div>
-					</div>
+					</div> -->
 
 					<div class="form-group">
 						<label class="col-xs-2 control-label" for="description">Description</label>
@@ -70,17 +70,18 @@
 						</div>
 					</div>
 
-					<!-- 	<div class="form-group">
-						<label class="col-xs-2 control-label" for="price"> Price</label>
+					<div class="form-group">
+						<label class="col-xs-2 control-label" for="loyaltyPoints">
+							LoyaltyPoints</label>
 						<div class="col-xs-8">
 							<div class="input-group">
-								<span class="input-group-addon">&euro;</span> <input
-									th:value="${game.loyaltyPoints}" type="number" name="loyaltyPoints"
-									step="1" class="form-control" id="loyaltyPoints" placeholder="loyaltyPoints" />
+								<input th:value="${game.loyaltyPoints}" type="number"
+									name="loyaltyPoints" step="1" class="form-control"
+									id="loyaltyPoints" placeholder="loyaltyPoints" />
 							</div>
 							<span class="help-block">Loyalty points</span>
 						</div>
-					</div> -->
+					</div>
 
 					<!-- <div class="form-group">
 						<div class="col-xs-2 control-label">
