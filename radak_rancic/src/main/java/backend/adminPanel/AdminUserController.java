@@ -1,6 +1,8 @@
-package backend.Adminpanel;
+package backend.adminPanel;
 
 import java.util.List;
+
+
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,45 +16,44 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import backend.service.PlatformService;
+import backend.service.GenreService;
+import backend.service.UserService;
 import database.entities.Genre;
-import database.entities.Platform;
+import database.entities.User;
+
 
 @RestController
-@RequestMapping("/admin/platform")
-public class AdminPlatformController {
-	
+@RequestMapping("/admin/user")
+public class AdminUserController {
 	@Autowired
-	PlatformService platformService;
+	private UserService userService;
 	
 	@GetMapping("/getall")
-	public List<Platform>findAll(){
-		return platformService.findAllPlatforms();
+	public List<User>findAll(){
+		return userService.getAllUsers();
 	}
 	@PostMapping("/add")
-	public String addNew(@RequestBody Platform p) {
-		String pName=p.getName();
-		if(platformService.ifPlatformExist(pName)) {
-			return "Platform already exist";
+	public String addNew(@RequestBody User u) {
+		String pName=u.getUsername();
+		if(userService.ifUserExists(pName)) {
+			return "User already exist";
 		}
-		platformService.addPlatform(p);
-		return "Platform added";
+		userService.addUser(u);
+		return "User added";
 	}
 	@DeleteMapping("/delete")
 	public String deleteOne(@RequestParam String name) {
 		String pName=name;
-		if(platformService.ifPlatformExist(pName)) {
-			platformService.deletePlatform(pName);
-			return "Genre deleted";
+		if(userService.ifUserExists(pName)) {
+			userService.deleteUser(pName);
+			return "User deleted";
 		}
-		return "Genre not exist";
+		return "User not exist";
 	}
 	@PutMapping("/update/{id}")
 	public String updatePayment(@PathVariable UUID id) {
-		Platform p=platformService.findPlatformById(id);
+		User u=userService.findUserById(id);
 		//Ode triba dodat da se iz forme skupe podatci i onda priko settera postave
-		return "Genre succesfully updated";
+		return "User succesfully updated";
 	}
-	
-
 }

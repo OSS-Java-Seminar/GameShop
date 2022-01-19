@@ -1,4 +1,4 @@
-package backend.Adminpanel;
+package backend.adminPanel;
 
 import java.util.List;
 import java.util.UUID;
@@ -38,6 +38,13 @@ public class AdminGameController {
 	@GetMapping("/getall")
 	public List<Game>findAll(){
 		return gameService.findAllGames();
+	}
+	
+	@RequestMapping("/gameList")
+	public String gameList(Model model) {
+		List<Game> gameList = gameService.findAllGames();
+		model.addAttribute("gameList", gameList);
+		return "gameList";
 	}
 	
 //	@GetMapping("/showNewGames")

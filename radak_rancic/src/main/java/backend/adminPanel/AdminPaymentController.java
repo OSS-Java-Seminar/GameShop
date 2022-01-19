@@ -1,8 +1,7 @@
-package backend.Adminpanel;
+package backend.adminPanel;
 
 import java.util.List;
-
-
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,44 +15,43 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import backend.service.GenreService;
-import backend.service.UserService;
-import database.entities.Genre;
-import database.entities.User;
-
+import backend.service.PaymentService;
+import backend.service.implementation.PaymentServiceImpl;
+import database.entities.Payment;
 
 @RestController
-@RequestMapping("/admin/user")
-public class AdminUserController {
+@RequestMapping("/admin/payment")
+public class AdminPaymentController {
+	
 	@Autowired
-	private UserService userService;
+	private PaymentService paymentService;
 	
 	@GetMapping("/getall")
-	public List<User>findAll(){
-		return userService.getAllUsers();
+	public List<Payment>findAll(){
+		return paymentService.findAllPayments();
 	}
 	@PostMapping("/add")
-	public String addNew(@RequestBody User u) {
-		String pName=u.getUsername();
-		if(userService.ifUserExists(pName)) {
-			return "User already exist";
+	public String addNew(@RequestBody Payment p) {
+		String pName=p.getType();
+		if(paymentService.ifPaymentExist(pName)) {
+			return "Payment already exist";
 		}
-		userService.addUser(u);
-		return "User added";
+		paymentService.addPayment(p);
+		return "Payment added";
 	}
 	@DeleteMapping("/delete")
-	public String deleteOne(@RequestParam String name) {
-		String pName=name;
-		if(userService.ifUserExists(pName)) {
-			userService.deleteUser(pName);
-			return "User deleted";
+	public String deleteOne(@RequestParam String type) {
+		String pName=type;
+		if(paymentService.ifPaymentExist(pName)) {
+			paymentService.deletePaymentByName(pName);
+			return "Payment deleted";
 		}
-		return "User not exist";
+		return "Payment not exist";
 	}
 	@PutMapping("/update/{id}")
 	public String updatePayment(@PathVariable UUID id) {
-		User u=userService.findUserById(id);
+		Payment p=paymentService.findPaymentById(id).get();
 		//Ode triba dodat da se iz forme skupe podatci i onda priko settera postave
-		return "User succesfully updated";
+		return "Measure succesfully updated";
 	}
 }

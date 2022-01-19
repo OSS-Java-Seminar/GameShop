@@ -1,4 +1,4 @@
-package backend.Adminpanel;
+package backend.adminPanel;
 
 import java.util.List;
 import java.util.UUID;

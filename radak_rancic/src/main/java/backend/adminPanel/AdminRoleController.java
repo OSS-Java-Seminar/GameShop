@@ -1,7 +1,6 @@
-package backend.Adminpanel;
+package backend.adminPanel;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,42 +14,41 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import backend.service.PaymentService;
-import backend.service.implementation.PaymentServiceImpl;
+import backend.service.RoleService;
 import database.entities.Payment;
+import database.entities.Role;
 
 @RestController
-@RequestMapping("/admin/payment")
-public class AdminPaymentController {
-	
+@RequestMapping("/admin/role")
+public class AdminRoleController {
 	@Autowired
-	private PaymentService paymentService;
+	private RoleService roleService;
 	
 	@GetMapping("/getall")
-	public List<Payment>findAll(){
-		return paymentService.findAllPayments();
+	public List<Role>findAll(){
+		return roleService.getAll();
 	}
 	@PostMapping("/add")
-	public String addNew(@RequestBody Payment p) {
-		String pName=p.getType();
-		if(paymentService.ifPaymentExist(pName)) {
-			return "Payment already exist";
+	public String addNew(@RequestBody Role r) {
+		String pName=r.getRoleName();
+		if(roleService.ifRoleExist(pName)) {
+			return "Role already exist";
 		}
-		paymentService.addPayment(p);
-		return "Payment added";
+		roleService.addRole(r);
+		return "Role added";
 	}
 	@DeleteMapping("/delete")
 	public String deleteOne(@RequestParam String type) {
 		String pName=type;
-		if(paymentService.ifPaymentExist(pName)) {
-			paymentService.deletePaymentByName(pName);
-			return "Payment deleted";
+		if(roleService.ifRoleExist(pName)) {
+			roleService.deleteRoleByName(pName);
+			return "Role deleted";
 		}
-		return "Payment not exist";
+		return "Role not exist";
 	}
 	@PutMapping("/update/{id}")
 	public String updatePayment(@PathVariable UUID id) {
-		Payment p=paymentService.findPaymentById(id).get();
+		Role p=roleService.findByRoleId(id);
 		//Ode triba dodat da se iz forme skupe podatci i onda priko settera postave
 		return "Measure succesfully updated";
 	}
