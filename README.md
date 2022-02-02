@@ -13,7 +13,7 @@
 
 ### Description
 
-Application that offers cheap PC, PlayStation and XBox game keys.
+Application that offers cheap PC, PlayStation and XBox games.
 
 <br />
 
@@ -25,28 +25,29 @@ Application that offers cheap PC, PlayStation and XBox game keys.
   - as guest
     - product overview
   - as user
+    - account creation via email confirmation
     - product overview
     - adding products to shopping cart
     - purchase products
-    - earn loyalty points
+    - adding shipping and billing address
+    - adding credit cards
     - register with email
-    - log in with username and password
+    - log-in with username and password
+    - receipt delivery on email
   - as admin
     - add/remove content
-    - user management
+    - view content list
+    - modify content
 - Search bar
   - simplified way to find desired product
 - Shopping cart
-- Loyalty point system (users only)
-  - Earning points
-    - purchasing products
-  - Spending points
-    - discounts
-    - game keys
-- Multiple payment methods
-  - Credit cards
-  - PayPal
-  - Paysafe
+  - adding, removing or updating quantity
+  - shows total product cost
+- Payment with multiple credit cards
+  - Visa
+  - MasterCard
+  - Discover
+  - American Express
 
 <br />
 
