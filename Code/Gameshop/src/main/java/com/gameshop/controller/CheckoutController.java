@@ -35,7 +35,7 @@ import com.gameshop.service.UserPaymentService;
 import com.gameshop.service.UserService;
 import com.gameshop.service.UserShippingService;
 import com.gameshop.utility.MailConstructor;
-import com.gameshop.utility.USConstants;
+import com.gameshop.utility.EUConstants;
 
 @Controller
 public class CheckoutController {
@@ -140,7 +140,7 @@ public class CheckoutController {
 		model.addAttribute("cartItemList", cartItemList);
 		model.addAttribute("shoppingCart", user.getShoppingCart());
 		
-		List<String> stateList = USConstants.listOfUSStatesCode;
+		List<String> stateList = EUConstants.listOfEuropeStatesName;
 		Collections.sort(stateList);
 		model.addAttribute("stateList", stateList);
 		
@@ -170,7 +170,7 @@ public class CheckoutController {
 			model.addAttribute("cartItemList", cartItemList);
 			model.addAttribute("shoppingCart", user.getShoppingCart());
 			
-			List<String> stateList = USConstants.listOfUSStatesCode;
+			List<String> stateList = EUConstants.listOfEuropeStatesName;
 			Collections.sort(stateList);
 			model.addAttribute("stateList", stateList);
 			
@@ -214,7 +214,7 @@ public class CheckoutController {
 			model.addAttribute("cartItemList", cartItemList);
 			model.addAttribute("shoppingCart", user.getShoppingCart());
 			
-			List<String> stateList = USConstants.listOfUSStatesCode;
+			List<String> stateList = EUConstants.listOfEuropeStatesName;
 			Collections.sort(stateList);
 			model.addAttribute("stateList", stateList);
 			

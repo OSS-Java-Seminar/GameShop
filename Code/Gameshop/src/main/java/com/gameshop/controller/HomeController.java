@@ -46,7 +46,7 @@ import com.gameshop.service.UserShippingService;
 import com.gameshop.service.impl.UserSecurityService;
 import com.gameshop.utility.MailConstructor;
 import com.gameshop.utility.SecurityUtility;
-import com.gameshop.utility.USConstants;
+import com.gameshop.utility.EUConstants;
 
 @Controller
 public class HomeController {
@@ -213,7 +213,7 @@ public class HomeController {
 			UserShipping userShipping = new UserShipping();
 			model.addAttribute("userShipping", userShipping);
 
-			List<String> stateList = USConstants.listOfUSStatesCode;
+			List<String> stateList = EUConstants.listOfEuropeStatesName;
 			Collections.sort(stateList);
 			model.addAttribute("stateList", stateList);
 
@@ -334,7 +334,7 @@ public class HomeController {
 		model.addAttribute("listOfCreditCards", true);
 		model.addAttribute("listOfShippingAddresses", true);
 
-		List<String> stateList = USConstants.listOfUSStatesCode;
+		List<String> stateList = EUConstants.listOfEuropeStatesName;
 		Collections.sort(stateList);
 		model.addAttribute("stateList", stateList);
 		model.addAttribute("classActiveEdit", true);
@@ -386,7 +386,7 @@ public class HomeController {
 		model.addAttribute("userBilling", userBilling);
 		model.addAttribute("userPayment", userPayment);
 
-		List<String> stateList = USConstants.listOfUSStatesCode;
+		List<String> stateList = EUConstants.listOfEuropeStatesName;
 		Collections.sort(stateList);
 		model.addAttribute("stateList", stateList);
 		model.addAttribute("userPaymentList", user.getUserPaymentList());
@@ -428,7 +428,7 @@ public class HomeController {
 			model.addAttribute("userPayment", userPayment);
 			model.addAttribute("userBilling", userBilling);
 
-			List<String> stateList = USConstants.listOfUSStatesCode;
+			List<String> stateList = EUConstants.listOfEuropeStatesName;
 			Collections.sort(stateList);
 			model.addAttribute("stateList", stateList);
 
@@ -482,7 +482,7 @@ public class HomeController {
 
 		model.addAttribute("userShipping", userShipping);
 
-		List<String> stateList = USConstants.listOfUSStatesCode;
+		List<String> stateList = EUConstants.listOfEuropeStatesName;
 		Collections.sort(stateList);
 		model.addAttribute("stateList", stateList);
 
@@ -523,7 +523,7 @@ public class HomeController {
 
 			model.addAttribute("userShipping", userShipping);
 
-			List<String> stateList = USConstants.listOfUSStatesCode;
+			List<String> stateList = EUConstants.listOfEuropeStatesName;
 			Collections.sort(stateList);
 			model.addAttribute("stateList", stateList);
 
